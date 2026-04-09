@@ -266,19 +266,46 @@
           </div>
           
           <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">Tipo de ocasión</label>
-            <select name="occasion" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all">
-              <option value="">Selecciona una opción</option>
-              <option value="amor">💕 Amor / San Valentín</option>
-              <option value="cumpleanos">🎂 Cumpleaños</option>
-              <option value="aniversario">💍 Aniversario</option>
-              <option value="pedida">💎 Pedida de matrimonio</option>
-              <option value="novia">👰 Bouquet de novia</option>
-              <option value="graduacion">🎓 Graduación</option>
-              <option value="despedida">🎉 Despedida</option>
-              <option value="otro">🌸 Otro</option>
-            </select>
-          </div>
+  <label class="block text-[#2C2C2C] font-medium mb-2">Tipo de producto</label>
+  
+  <select name="producto" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all">
+    
+    <option value="">Selecciona una opción</option>
+
+    <!-- Ramos -->
+    <option value="ramos_rosas">🌹 Ramos de rosas</option>
+    <option value="ramos_girasoles">🌻 Ramos de girasoles</option>
+    <option value="ramos_lilis">💐 Ramos de lilis</option>
+    <option value="ramos_coreanos">🎀 Ramos coreanos</option>
+    <option value="gerberas">🌼 Gerberas</option>
+
+    <!-- Especiales -->
+    <option value="tulipanes">🌷 Tulipanes</option>
+
+    <!-- Arreglos -->
+    <option value="maxi_ramos">💎 Maxi ramos</option>
+    <option value="corazon_rosas">❤️ Corazón de rosas</option>
+    <option value="jarrones">🏺 Jarrones florales</option>
+
+    <!-- Cajas -->
+    <option value="cajas">🎁 Cajas</option>
+    <option value="cajas_especiales">✨ Cajas especiales</option>
+    <option value="desayunos">🥐 Desayunos</option>
+
+    <!-- Eventos -->
+    <option value="graduaciones">🎓 Graduaciones</option>
+
+    <!-- Extras -->
+    <option value="globos">🎈 Globos burbuja</option>
+    <option value="extras">➕ Extras</option>
+    <option value="extras_especiales">⭐ Extras especiales</option>
+
+    <!-- Promos -->
+    <option value="promos">💸 Promos</option>
+
+  </select>
+</div>
+
           
           <div>
             <label class="block text-[#2C2C2C] font-medium mb-2">Fecha de entrega deseada</label>
@@ -549,29 +576,28 @@ document.querySelector('[data-landingsite-contact-form]').addEventListener('subm
   const nombre = form.name.value;
   const telefono = form.phone.value;
   const email = form.email.value;
-  const ocasion = form.occasion.value;
+  const producto = form.producto.value; // 🔥 cambiado
   const fecha = form.date.value;
   const direccion = form.address.value;
   const mensajeExtra = form.message.value;
 
   const numero = "528120005880"; // CAMBIA POR EL TUYO
 
-  // Mensaje normal (SIN %0A)
   const mensaje = `🌸 Nueva solicitud de pedido 🌸
 
 👤 Nombre: ${nombre}
 📱 Teléfono: ${telefono}
 📧 Email: ${email || 'No proporcionado'}
-🎁 Ocasión: ${ocasion || 'No especificada'}
+🛍️ Producto: ${producto || 'No especificado'}
 📅 Fecha: ${fecha || 'No especificada'}
 📍 Dirección: ${direccion || 'No proporcionada'}
 💬 Detalles: ${mensajeExtra || 'Sin detalles'}`;
 
-  // Aquí está la clave 👇
   const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
-window.open(url, "_blank");
+  window.open(url, "_blank");
 
 });
 </script>
+
 
 
