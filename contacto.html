@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Florería Lilians</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- FAVICON PRO -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icono.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icono.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icono.png">
+  <link rel="shortcut icon" href="img/icono.png">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="global-header" class="code-section">
+  <nav class="bg-[#FEF7FA] backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#F5E0E9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+
+        <a href="index.html" class="flex items-center">
+          <img src="https://assets.ls-assets.com/uploads/3d736927-68b0-4671-b1f8-a9d3042dabe2/6b09969b-5565-42d5-8eed-a28f91ef01d9.png?w=768"
+            alt="Florería Lilians" class="h-10 lg:h-12 w-auto">
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <div class="hidden lg:flex items-center space-x-8">
+
+          <a href="catalogo.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Catálogo
+          </a>
+
+          <a href="entregas.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Entregas
+          </a>
+
+          <a href="opiniones.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Opiniones
+          </a>
+
+          <a href="sobre-nosotros.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Sobre Nosotros
+          </a>
+
+          <a href="contacto.html"
+            class="bg-[#A8D5BA] text-[#2C2C2C] px-6 py-2.5 rounded-full font-semibold hover:bg-[#95C9A8] hover:text-[#1A1A1A] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <i class="fab fa-whatsapp mr-2"></i>Ordena por WhatsApp
+          </a>
+
+        </div>
+
+        <!-- MOBILE BUTTON -->
+        <button data-landingsite-mobile-menu-toggle=""
+          class="lg:hidden p-2 rounded-lg hover:bg-[#FFE5F0] transition-colors duration-300"
+          aria-label="Abrir menú">
+          <svg class="w-6 h-6 text-[#2C2C2C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div data-landingsite-mobile-menu=""
+      class="hidden lg:hidden bg-[#FEF7FA] border-t border-[#F5E0E9]">
+
+      <div class="px-4 py-4 space-y-3">
+
+        <a href="catalogo.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Catálogo
+        </a>
+
+        <a href="entregas.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Entregas
+        </a>
+
+        <a href="opiniones.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Opiniones
+        </a>
+
+        <a href="sobre-nosotros.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Sobre Nosotros
+        </a>
+
+        <a href="contacto.html"
+          class="block bg-[#A8D5BA] text-[#2C2C2C] px-6 py-3 rounded-full font-semibold text-center mt-4 hover:bg-[#95C9A8] transition-all">
+          <i class="fab fa-whatsapp mr-2"></i>Ordena por WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+<section id="contact-hero" class="code-section relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#25D366] via-[#128C7E] to-[#075E54]"></div>
+  <div class="absolute top-20 right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl"></div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
+    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+      <i class="fab fa-whatsapp text-[#25D366] text-5xl"></i>
+    </div>
+    
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+      Contáctanos<br>
+      <span class="text-[#F8C8DC]">¡Estamos para Ayudarte!</span>
+    </h1>
+    
+    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      ¿Tienes preguntas o quieres hacer un pedido especial? 
+      Escríbenos por WhatsApp y te responderemos lo más pronto posible.
+    </p>
+    
+    <!-- Main CTA -->
+    <a href="https://wa.me/528120005880?text=Hola%2C%20me%20interesa%20hacer%20un%20pedido" class="inline-flex items-center gap-3 bg-white text-[#25D366] px-10 py-5 rounded-full text-xl font-bold hover:bg-[#F8C8DC] hover:text-[#2C2C2C] transition-all duration-300 shadow-2xl transform hover:-translate-y-1">
+      <i class="fab fa-whatsapp text-3xl"></i>
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+<section id="contact-options" class="code-section bg-[#FEF7FA] py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="inline-block text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-3">Opciones de Contacto</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#2C2C2C] mb-4">¿Cómo Puedo Ayudarte?</h2>
+      <p class="text-[#6B6B6B] text-lg max-w-2xl mx-auto">
+        Elige la opción que mejor se adapte a lo que necesitas
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Opción 1: WhatsApp -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#25D366]">
+        <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fab fa-whatsapp text-white text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2C2C2C] mb-3 text-center">WhatsApp</h3>
+        <p class="text-[#6B6B6B] text-center mb-6">
+          La forma más rápida de contactarnos. Respuesta en minutos.
+        </p>
+        <a href="https://wa.me/528120005880" class="block w-full bg-[#25D366] text-white text-center py-3 rounded-full font-semibold hover:bg-[#128C7E] transition-colors">
+          <i class="fab fa-whatsapp mr-2"></i>Enviar Mensaje
+        </a>
+      </div>
+      
+      <!-- Opción 2: Llamada -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#F8C8DC]">
+        <div class="w-16 h-16 bg-[#F8C8DC] rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-phone text-[#2C2C2C] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2C2C2C] mb-3 text-center">Llamada Telefónica</h3>
+        <p class="text-[#6B6B6B] text-center mb-6">
+          ¿Prefieres hablar directamente? Llámanos en horario de atención.
+        </p>
+        <a href="tel:+528120005880" class="block w-full bg-[#F8C8DC] text-[#2C2C2C] text-center py-3 rounded-full font-semibold hover:bg-[#F5B5CD] transition-colors">
+          <i class="fas fa-phone mr-2"></i>Llamar Ahora
+        </a>
+      </div>
+      
+      <!-- Opción 3: Formulario -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#A8D5BA]">
+        <div class="w-16 h-16 bg-[#A8D5BA] rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-envelope text-[#2C2C2C] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2C2C2C] mb-3 text-center">Mensaje</h3>
+        <p class="text-[#6B6B6B] text-center mb-6">
+          Envíanos un mensaje con los detalles de tu pedido.
+        </p>
+        <a href="#formulario" class="block w-full bg-[#A8D5BA] text-[#2C2C2C] text-center py-3 rounded-full font-semibold hover:bg-[#95C9A8] transition-colors">
+          <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formulario" class="code-section bg-white py-16 lg:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <!-- Left: Info -->
+      <div>
+        <span class="inline-block text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-3">Escríbenos</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#2C2C2C] mb-6">
+          ¿Tienes un Pedido Especial?
+        </h2>
+        <p class="text-[#6B6B6B] text-lg mb-8">
+          Completa el formulario y nos pondremos en contacto contigo lo antes posible 
+          para confirmar tu pedido y los detalles de entrega.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#F8C8DC] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-clock text-[#D4AF37]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Horario de Atención</h4>
+              <p class="text-[#6B6B6B]">Lun - Sáb: 9:00 AM - 7:00 PM</p>
+              <p class="text-[#6B6B6B]">Domingos: Cerrado</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#A8D5BA] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-bolt text-[#2C2C2C]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Entrega el Mismo Día</h4>
+              <p class="text-[#6B6B6B]">Pedidos antes de las 2:00 PM</p>
+              <p class="text-[#6B6B6B]">sujeto a disponibilidad de zona</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-truck text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Zonas de Entrega</h4>
+              <p class="text-[#6B6B6B]">Cubrimos zona urbana y conurbada</p>
+              <p class="text-[#6B6B6B]">Otras zonas consultar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Form -->
+      <div class="bg-[#FEF7FA] rounded-3xl p-8 lg:p-10">
+        <form id="contacto-form" data-landingsite-contact-form class="space-y-6">
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">Nombre completo *</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all" placeholder="Ej: María García">
+          </div>
+          
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">WhatsApp / Teléfono *</label>
+            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all" placeholder="Ej: +52 123 456 7890">
+          </div>
+          
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">Correo electrónico</label>
+            <input type="email" name="email" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all" placeholder="Ej: correo@ejemplo.com">
+          </div>
+          
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">Tipo de ocasión</label>
+            <select name="occasion" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all">
+              <option value="">Selecciona una opción</option>
+              <option value="amor">💕 Amor / San Valentín</option>
+              <option value="cumpleanos">🎂 Cumpleaños</option>
+              <option value="aniversario">💍 Aniversario</option>
+              <option value="pedida">💎 Pedida de matrimonio</option>
+              <option value="novia">👰 Bouquet de novia</option>
+              <option value="graduacion">🎓 Graduación</option>
+              <option value="despedida">🎉 Despedida</option>
+              <option value="otro">🌸 Otro</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">Fecha de entrega deseada</label>
+            <input type="date" name="date" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all">
+          </div>
+          
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">Dirección de entrega</label>
+            <textarea name="address" rows="2" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all resize-none" placeholder="Calle, número, colonia, ciudad"></textarea>
+          </div>
+          
+          <div>
+            <label class="block text-[#2C2C2C] font-medium mb-2">Mensaje / Detalles del pedido</label>
+            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all resize-none" placeholder="Cuéntanos más sobre lo que buscas: colores, tipo de flores, presupuesto, etc."></textarea>
+          </div>
+          
+          <button type="submit" class="w-full bg-[#A8D5BA] text-[#2C2C2C] py-4 rounded-full font-bold text-lg hover:bg-[#95C9A8] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            Enviar Solicitud
+          </button>
+          
+          <p class="text-center text-sm text-[#6B6B6B]">
+            <i class="fas fa-shield-alt text-[#A8D5BA] mr-1"></i>
+            Tu información está segura y nunca será compartida.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-location" class="code-section bg-[#FEF7FA] py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Map -->
+      <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px]">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4537.256419758701!2d-100.37150552677622!3d25.73675696638706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662975a52f81269%3A0xaed7e4e4337e262f!2sFlorer%C3%ADa%20Lilians!5e1!3m2!1ses-419!2smx!4v1775547932800!5m2!1ses-419!2smx" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+          title="Ubicación de Florería Lilians">
+        </iframe>
+      </div>
+      
+      <!-- Info -->
+      <div>
+        <span class="inline-block text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-3">Visítanos</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#2C2C2C] mb-6">
+          Nuestra Florería
+        </h2>
+        <p class="text-[#6B6B6B] text-lg mb-8">
+          También puedes visitarnos en nuestra florería para ver nuestros arreglos en persona 
+          y hacer tu pedido directamente.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#F8C8DC] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-map-marker-alt text-[#D4AF37]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Dirección</h4>
+                <p class="text-[#6B6B6B]">C. No Reelección 5518, 64117</p>
+                <p class="text-[#6B6B6B]">Monterrey, N.L.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#A8D5BA] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-clock text-[#2C2C2C]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Horario de Atención</h4>
+              <p class="text-[#6B6B6B]">Lunes a Sábado: 9:00 AM - 7:00 PM</p>
+              <p class="text-[#6B6B6B]">Domingos: Cerrado</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-phone text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Teléfono</h4>
+              <p class="text-[#6B6B6B]">+52 81-2000-5880</p>
+              <p class="text-[#6B6B6B]">+52 81-2363-4312</p>
+              <p class="text-[#6B6B6B]">+52 81-3577-1074</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://wa.me/528120005880" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#128C7E] transition-colors">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="tel:+528120005880" class="inline-flex items-center gap-2 bg-[#F8C8DC] text-[#2C2C2C] px-6 py-3 rounded-full font-semibold hover:bg-[#F5B5CD] transition-colors">
+            <i class="fas fa-phone"></i> Llamar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-faq" class="code-section bg-white py-16 lg:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="inline-block text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-3">
+        Preguntas Frecuentes
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#2C2C2C] mb-4">
+        ¿Tienes Dudas?
+      </h2>
+    </div>
+
+    <div class="space-y-4" data-landingsite-faq>
+
+      <!-- FAQ 1 -->
+      <div class="bg-[#FEF7FA] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+        <button class="w-full flex items-center justify-between p-6 text-left" data-landingsite-faq-question>
+          <span class="font-bold text-[#2C2C2C]">¿Hasta qué hora puedo pedir para entrega el mismo día?</span>
+          <i class="fas fa-chevron-down text-[#D4AF37] transition-transform"></i>
+        </button>
+        <div class="px-6 pb-6 hidden" data-landingsite-faq-answer>
+          <p class="text-[#6B6B6B]">
+            Puedes hacer tu pedido hasta las 2:00 PM para entrega el mismo día, sujeto a disponibilidad en tu zona.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="bg-[#FEF7FA] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+        <button class="w-full flex items-center justify-between p-6 text-left" data-landingsite-faq-question>
+          <span class="font-bold text-[#2C2C2C]">¿Puedo personalizar mi arreglo floral?</span>
+          <i class="fas fa-chevron-down text-[#D4AF37] transition-transform"></i>
+        </button>
+        <div class="px-6 pb-6 hidden" data-landingsite-faq-answer>
+          <p class="text-[#6B6B6B]">
+            ¡Sí! Podemos personalizar colores, tipo de flores, tamaño y estilo. Solo escríbenos por WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="bg-[#FEF7FA] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+        <button class="w-full flex items-center justify-between p-6 text-left" data-landingsite-faq-question>
+          <span class="font-bold text-[#2C2C2C]">¿Cuáles son las zonas de entrega?</span>
+          <i class="fas fa-chevron-down text-[#D4AF37] transition-transform"></i>
+        </button>
+        <div class="px-6 pb-6 hidden" data-landingsite-faq-answer>
+          <p class="text-[#6B6B6B]">
+            Entregamos en zona urbana y áreas cercanas. Para otras ubicaciones, puedes consultarnos por WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="bg-[#FEF7FA] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+        <button class="w-full flex items-center justify-between p-6 text-left" data-landingsite-faq-question>
+          <span class="font-bold text-[#2C2C2C]">¿Cómo puedo pagar mi pedido?</span>
+          <i class="fas fa-chevron-down text-[#D4AF37] transition-transform"></i>
+        </button>
+        <div class="px-6 pb-6 hidden" data-landingsite-faq-answer>
+          <p class="text-[#6B6B6B]">
+            Aceptamos transferencia bancaria, efectivo, tarjeta de débito y crédito. El pago se confirma antes de preparar el pedido.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="bg-[#FEF7FA] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+        <button class="w-full flex items-center justify-between p-6 text-left" data-landingsite-faq-question>
+          <span class="font-bold text-[#2C2C2C]">¿Las flores son frescas?</span>
+          <i class="fas fa-chevron-down text-[#D4AF37] transition-transform"></i>
+        </button>
+        <div class="px-6 pb-6 hidden" data-landingsite-faq-answer>
+          <p class="text-[#6B6B6B]">
+            Sí, trabajamos con flores frescas todos los días para garantizar la mejor calidad y duración.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="bg-[#FEF7FA] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+        <button class="w-full flex items-center justify-between p-6 text-left" data-landingsite-faq-question>
+          <span class="font-bold text-[#2C2C2C]">¿Puedo enviar un mensaje o dedicatoria?</span>
+          <i class="fas fa-chevron-down text-[#D4AF37] transition-transform"></i>
+        </button>
+        <div class="px-6 pb-6 hidden" data-landingsite-faq-answer>
+          <p class="text-[#6B6B6B]">
+            ¡Claro! Puedes agregar una dedicatoria y nosotros la incluimos en tu arreglo sin costo extra.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact-cta" class="code-section relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-[#25D366] via-[#128C7E] to-[#075E54]"></div>
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+    <div class="absolute top-10 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 text-center">
+    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-8">
+      <i class="fab fa-whatsapp text-[#25D366] text-4xl"></i>
+    </div>
+    
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+      ¡Estamos a un Mensaje de Distancia!
+    </h2>
+    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      No esperes más para hacer feliz a alguien especial. 
+      Escríbenos ahora y comienza a crear el arreglo perfecto.
+    </p>
+    
+    <a href="https://wa.me/528120005880?text=Hola%2C%20me%20interesa%20hacer%20un%20pedido" class="inline-flex items-center gap-3 bg-white text-[#25D366] px-10 py-5 rounded-full text-xl font-bold hover:bg-[#F8C8DC] hover:text-[#2C2C2C] transition-all duration-300 shadow-2xl transform hover:-translate-y-1">
+      <i class="fab fa-whatsapp text-3xl"></i>
+      Iniciar Conversación
+    </a>
+  </div>
+</section>
+<script src="script.js" defer></script>
+<script>
+// FAQ Accordion
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll("[data-landingsite-faq-item]");
+
+  items.forEach((item) => {
+    const button = item.querySelector("[data-landingsite-faq-question]");
+    const answer = item.querySelector("[data-landingsite-faq-answer]");
+    const icon = item.querySelector("i");
+
+    button.addEventListener("click", () => {
+      const isOpen = !answer.classList.contains("hidden");
+
+      // Cerrar todos (opcional pero se ve más pro)
+      items.forEach((el) => {
+        el.querySelector("[data-landingsite-faq-answer]").classList.add("hidden");
+        const ic = el.querySelector("i");
+        if (ic) ic.classList.remove("rotate-180");
+      });
+
+      // Si estaba cerrado, lo abrimos
+      if (isOpen) return;
+
+      answer.classList.remove("hidden");
+      if (icon) icon.classList.add("rotate-180");
+    });
+  });
+});
+</script>
+
+<script>
+document.querySelector('[data-landingsite-contact-form]').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const nombre = form.name.value;
+  const telefono = form.phone.value;
+  const email = form.email.value;
+  const ocasion = form.occasion.value;
+  const fecha = form.date.value;
+  const direccion = form.address.value;
+  const mensajeExtra = form.message.value;
+
+  const numero = "528120005880"; // CAMBIA POR EL TUYO
+
+  // Mensaje normal (SIN %0A)
+  const mensaje = `🌸 Nueva solicitud de pedido 🌸
+
+👤 Nombre: ${nombre}
+📱 Teléfono: ${telefono}
+📧 Email: ${email || 'No proporcionado'}
+🎁 Ocasión: ${ocasion || 'No especificada'}
+📅 Fecha: ${fecha || 'No especificada'}
+📍 Dirección: ${direccion || 'No proporcionada'}
+💬 Detalles: ${mensajeExtra || 'Sin detalles'}`;
+
+  // Aquí está la clave 👇
+  const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+window.open(url, "_blank");
+
+});
+</script>
+
+

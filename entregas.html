@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Florería Lilians</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- FAVICON PRO -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icono.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icono.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icono.png">
+  <link rel="shortcut icon" href="img/icono.png">
+
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<header id="global-header" class="code-section">
+  <nav class="bg-[#FEF7FA] backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#F5E0E9]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+
+        <a href="index.html" class="flex items-center">
+          <img src="https://assets.ls-assets.com/uploads/3d736927-68b0-4671-b1f8-a9d3042dabe2/6b09969b-5565-42d5-8eed-a28f91ef01d9.png?w=768"
+            alt="Florería Lilians" class="h-10 lg:h-12 w-auto">
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <div class="hidden lg:flex items-center space-x-8">
+
+          <a href="catalogo.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Catálogo
+          </a>
+
+          <a href="entregas.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Entregas
+          </a>
+
+          <a href="opiniones.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Opiniones
+          </a>
+
+          <a href="sobre-nosotros.html"
+            class="text-[#2C2C2C] hover:text-[#D4AF37] font-medium transition-colors duration-300">
+            Sobre Nosotros
+          </a>
+
+          <a href="contacto.html"
+            class="bg-[#A8D5BA] text-[#2C2C2C] px-6 py-2.5 rounded-full font-semibold hover:bg-[#95C9A8] hover:text-[#1A1A1A] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <i class="fab fa-whatsapp mr-2"></i>Ordena por WhatsApp
+          </a>
+
+        </div>
+
+        <!-- MOBILE BUTTON -->
+        <button data-landingsite-mobile-menu-toggle=""
+          class="lg:hidden p-2 rounded-lg hover:bg-[#FFE5F0] transition-colors duration-300"
+          aria-label="Abrir menú">
+          <svg class="w-6 h-6 text-[#2C2C2C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div data-landingsite-mobile-menu=""
+      class="hidden lg:hidden bg-[#FEF7FA] border-t border-[#F5E0E9]">
+
+      <div class="px-4 py-4 space-y-3">
+
+        <a href="catalogo.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Catálogo
+        </a>
+
+        <a href="entregas.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Entregas
+        </a>
+
+        <a href="opiniones.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Opiniones
+        </a>
+
+        <a href="sobre-nosotros.html"
+          class="block text-[#2C2C2C] hover:text-[#D4AF37] font-medium py-2 transition-colors">
+          Sobre Nosotros
+        </a>
+
+        <a href="contacto.html"
+          class="block bg-[#A8D5BA] text-[#2C2C2C] px-6 py-3 rounded-full font-semibold text-center mt-4 hover:bg-[#95C9A8] transition-all">
+          <i class="fab fa-whatsapp mr-2"></i>Ordena por WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+<section id="deliveries-hero" class="code-section relative overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#2C2C2C] via-[#3D3D3D] to-[#2C2C2C]"></div>
+  <div class="absolute inset-0 opacity-10" style="background-image: url('https://assets.ls-assets.com/provider/istock/2247357789.jpg?w=1920'); background-size: cover; background-position: center;"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-[#A8D5BA] text-[#2C2C2C] px-4 py-2 rounded-full text-sm font-bold mb-6">
+        <i class="fas fa-truck"></i>
+        <span>Servicio de Entrega</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+        Entregas
+        <span class="text-[#F8C8DC]"> Rápidas y Confiables</span>
+      </h1>
+      
+      <p class="text-xl text-gray-300 mb-8">
+        Hacemos llegar tu arreglo floral fresco y hermoso a donde tú lo necesites. 
+        Entregas el mismo día disponibles.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 mt-6">
+    <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
+      🚚 Entrega a domicilio
+    </span>
+
+    <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
+      🏬 Recolección en tienda
+    </span>
+
+    <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
+      🛍️ Compra en tienda
+    </span>
+  </div>
+  
+      <a href="contacto.html" class="inline-flex items-center gap-3 bg-[#A8D5BA] text-[#2C2C2C] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#95C9A8] transition-all duration-300 shadow-xl">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        Solicitar Entrega
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="delivery-info" class="code-section bg-[#FEF7FA] py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div>
+        <span class="inline-block text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-3">¿Cómo Funciona?</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#2C2C2C] mb-6">
+          Proceso de Entrega Simple y Transparente
+        </h2>
+        <p class="text-[#6B6B6B] text-lg mb-8">
+          Nos esforzamos por hacer que cada entrega sea una experiencia perfecta. 
+          Aquí te explicamos cómo trabajamos.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-[#F8C8DC] rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-[#D4AF37] font-bold text-xl">1</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#2C2C2C] mb-2">Haz tu Pedido</h3>
+              <p class="text-[#6B6B6B]">Escríbenos por WhatsApp con los detalles: arreglo, dirección y horario preferido.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-[#A8D5BA] rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-[#2C2C2C] font-bold text-xl">2</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#2C2C2C] mb-2">Confirmamos y Preparamos</h3>
+              <p class="text-[#6B6B6B]">Te confirmamos disponibilidad y preparamos tu arreglo con flores frescas.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold text-xl">3</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#2C2C2C] mb-2">Entregamos con Amor</h3>
+              <p class="text-[#6B6B6B]">Nuestro equipo entrega tu arreglo en la fecha y dirección indicadas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Content - Card -->
+      <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl">
+        <h3 class="text-2xl font-bold text-[#2C2C2C] mb-6 flex items-center gap-3">
+          <i class="fas fa-clock text-[#D4AF37]"></i>
+          Horarios de Entrega
+        </h3>
+        
+        <div class="space-y-4 mb-8">
+          <div class="flex justify-between items-center py-3 border-b border-[#F5E0E9]">
+            <span class="text-[#6B6B6B]">Lunes a Viernes</span>
+            <span class="font-bold text-[#2C2C2C]">9:00 AM - 7:00 PM</span>
+          </div>
+          <div class="flex justify-between items-center py-3 border-b border-[#F5E0E9]">
+            <span class="text-[#6B6B6B]">Sábados</span>
+            <span class="font-bold text-[#2C2C2C]">9:00 AM - 7:00 PM</span>
+          </div>
+          <div class="flex justify-between items-center py-3 border-b border-[#F5E0E9]">
+            <span class="text-[#6B6B6B]">Domingos</span>
+            <span class="font-bold text-[#2C2C2C]">Cerrado</span>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <span class="text-[#6B6B6B]">Días Festivos</span>
+            <span class="font-bold text-[#F8C8DC]">Consultar disponibilidad</span>
+          </div>
+        </div>
+        
+        <div class="bg-[#FDF0F5] rounded-2xl p-6">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-bolt text-[#D4AF37] text-xl mt-1"></i>
+            <div>
+              <h4 class="font-bold text-[#2C2C2C] mb-1">Entrega el Mismo Día</h4>
+              <p class="text-sm text-[#6B6B6B]">Pedidos recibidos antes de las 2:00 PM se entregan el mismo día (según disponibilidad de zona).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="delivery-zones" class="code-section bg-white py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="inline-block text-[#D4AF37] font-semibold text-sm tracking-wider uppercase mb-3">Cobertura</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#2C2C2C] mb-4">Zonas de Entrega</h2>
+      <p class="text-[#6B6B6B] text-lg max-w-2xl mx-auto">
+        Entregamos en las siguientes áreas. Otras zonas consultar por WhatsApp.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Zona 1 -->
+      <div class="bg-[#FEF7FA] rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-300">
+        <div class="w-16 h-16 bg-[#A8D5BA] rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2C2C2C] mb-3">Zona Urbana</h3>
+        <p class="text-[#6B6B6B] mb-4">Centro, colonias principales y áreas metropolitanas</p>
+        <div class="bg-[#A8D5BA] text-[#2C2C2C] px-4 py-2 rounded-full inline-block font-semibold">
+          Consultar precio
+        </div>
+      </div>
+      
+      <!-- Zona 2 -->
+      <div class="bg-[#FEF7FA] rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-300">
+        <div class="w-16 h-16 bg-[#F8C8DC] rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-map text-[#2C2C2C] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2C2C2C] mb-3">Zona Conurbada</h3>
+        <p class="text-[#6B6B6B] mb-4">Áreas cercanas y municipios adjuntos</p>
+        <div class="bg-[#F8C8DC] text-[#2C2C2C] px-4 py-2 rounded-full inline-block font-semibold">
+          Consultar precio
+        </div>
+      </div>
+      
+      <!-- Zona 3 -->
+      <div class="bg-[#FEF7FA] rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-300">
+        <div class="w-16 h-16 bg-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-globe text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2C2C2C] mb-3">Fuera de Zona</h3>
+        <p class="text-[#6B6B6B] mb-4">Otras ubicaciones (consultar)</p>
+        <div class="bg-[#D4AF37] text-white px-4 py-2 rounded-full inline-block font-semibold">
+          Consultar precio
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-10 p-6 bg-[#FDF0F5] rounded-2xl">
+      <p class="text-[#6B6B6B]">
+        <i class="fas fa-info-circle text-[#D4AF37] mr-2"></i>
+        ¿No estás seguro si cubrimos tu zona? 
+        <a href="contacto.html" class="text-[#D4AF37] font-semibold hover:underline">Escríbenos por WhatsApp</a> 
+        y con gusto te ayudamos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="delivery-urgency" class="code-section relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-[#E5C76B] to-[#D4AF37]"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+          ¡Pide Hoy, Recibe Hoy!
+        </h2>
+        <p class="text-white/90 text-lg mb-6">
+            Los pedidos realizados antes de las <strong>2:00 PM</strong> se entregan el mismo día.
+        </p>
+
+        <a href="contacto.html" class="inline-flex items-center gap-3 bg-white text-[#D4AF37] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#2C2C2C] hover:text-white transition-all duration-300 shadow-xl">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          ¡Ordena Ahora!
+        </a>
+      </div>
+      
+      <div class="bg-white/20 backdrop-blur-md rounded-3xl p-8 text-center">
+        <p class="text-white font-semibold mb-4">Tiempo restante para entrega hoy:</p>
+        <div class="flex justify-center gap-4">
+          <div class="bg-white rounded-2xl p-4 min-w-[70px]">
+            <div id="hours" class="text-4xl font-bold text-[#D4AF37]">02</div>
+            <div class="text-white/70 text-sm">Horas</div>
+          </div>
+          <div class="text-white text-3xl font-bold pt-4">:</div>
+          <div class="bg-white rounded-2xl p-4 min-w-[70px]">
+            <div id="minutes" class="text-4xl font-bold text-[#D4AF37]">00</div>
+            <div class="text-white/70 text-sm">Min</div>
+          </div>
+          <div class="text-white text-3xl font-bold pt-4">:</div>
+          <div class="bg-white rounded-2xl p-4 min-w-[70px]">
+            <div id="seconds" class="text-4xl font-bold text-[#D4AF37]">00</div>
+            <div class="text-white/70 text-sm">Seg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// ===== COUNTDOWN =====
+function updateCountdown() {
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+
+  if (!hoursEl || !minutesEl || !secondsEl) return;
+
+  const now = new Date();
+  const cutoff = new Date();
+  cutoff.setHours(14, 0, 0, 0); // 2:00 PM
+
+  // si ya pasó la hora, se mueve al día siguiente
+  if (now > cutoff) {
+    cutoff.setDate(cutoff.getDate() + 1);
+  }
+
+  const diff = cutoff - now;
+
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  hoursEl.textContent = String(hours).padStart(2, '0');
+  minutesEl.textContent = String(minutes).padStart(2, '0');
+  secondsEl.textContent = String(seconds).padStart(2, '0');
+}
+
+// ===== MOBILE MENU =====
+function toggleMobileMenu() {
+  const menu = document.querySelector('[data-landingsite-mobile-menu]');
+  if (menu) menu.classList.toggle('hidden');
+}
+
+function setupMobileMenu() {
+  const btn = document.querySelector('[data-landingsite-mobile-menu-toggle]');
+  if (btn) {
+    btn.addEventListener('click', toggleMobileMenu);
+  }
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+  setupMobileMenu();
+});
+</script>
