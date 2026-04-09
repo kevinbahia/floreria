@@ -247,79 +247,86 @@
         </div>
       </div>
       
-      <!-- Right: Form -->
-      <div class="bg-[#FEF7FA] rounded-3xl p-8 lg:p-10">
-        <form id="contacto-form" data-landingsite-contact-form class="space-y-6">
-          <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">Nombre completo *</label>
-            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all" placeholder="Ej: María García">
-          </div>
-          
-          <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">WhatsApp / Teléfono *</label>
-            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all" placeholder="Ej: +52 123 456 7890">
-          </div>
-          
-          <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">Correo electrónico</label>
-            <input type="email" name="email" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all" placeholder="Ej: correo@ejemplo.com">
-          </div>
-          
-          <div>
-  <label class="block text-[#2C2C2C] font-medium mb-2">Tipo de producto</label>
-  
-  <select name="producto" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all">
-    
+      <form data-landingsite-contact-form class="bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto">
+
+  <h2 class="text-2xl font-bold mb-6 text-center">Haz tu pedido</h2>
+
+  <!-- NOMBRE -->
+  <label class="block font-semibold mb-1">Nombre completo *</label>
+  <input type="text" name="name" required
+    placeholder="Ej: María García"
+    class="w-full p-3 border rounded-lg mb-4">
+
+  <!-- TEL -->
+  <label class="block font-semibold mb-1">WhatsApp / Teléfono *</label>
+  <input type="text" name="phone" required
+    placeholder="Ej: +52 123 456 7890"
+    class="w-full p-3 border rounded-lg mb-4">
+
+  <!-- EMAIL -->
+  <label class="block font-semibold mb-1">Correo electrónico</label>
+  <input type="email" name="email"
+    placeholder="Ej: correo@ejemplo.com"
+    class="w-full p-3 border rounded-lg mb-4">
+
+  <!-- PRODUCTO -->
+  <label class="block font-semibold mb-1">Tipo de producto</label>
+  <select name="producto" id="producto" class="w-full p-3 border rounded-lg mb-4">
     <option value="">Selecciona una opción</option>
-
-    <!-- Ramos -->
-    <option value="ramos_rosas">🌹 Ramos de rosas</option>
-    <option value="ramos_girasoles">🌻 Ramos de girasoles</option>
-    <option value="ramos_lilis">💐 Ramos de lilis</option>
-    <option value="ramos_coreanos">🎀 Ramos coreanos</option>
-    <option value="gerberas">🌼 Gerberas</option>
-
-    <!-- Especiales -->
-    <option value="tulipanes">🌷 Tulipanes</option>
-
-    <!-- Arreglos -->
-    <option value="maxi_ramos">💎 Maxi ramos</option>
-    <option value="corazon_rosas">❤️ Corazón de rosas</option>
-    <option value="jarrones">🏺 Jarrones florales</option>
-
-    <!-- Cajas -->
-    <option value="cajas">🎁 Cajas</option>
-    <option value="cajas_especiales">✨ Cajas especiales</option>
-    <option value="desayunos">🥐 Desayunos</option>
-
-    <!-- Eventos -->
-    <option value="graduaciones">🎓 Graduaciones</option>
-
-    <!-- Globos -->
-    <option value="globos">🎈 Globos burbuja</option>
-
-    <!-- Promos -->
-    <option value="promos">💸 Promos</option>
-
+    <option value="Ramos de rosas">Ramos de rosas</option>
+    <option value="Tulipanes">Tulipanes</option>
+    <option value="Ramos de girasoles">Ramos de girasoles</option>
+    <option value="Maxi ramos">Maxi ramos</option>
+    <option value="Maxi Enamorados">Maxi Enamorados</option>
+    <option value="Jarrones">Jarrones</option>
+    <option value="Ramos de lilis">Ramos de lilis</option>
+    <option value="Gerberas">Gerberas</option>
+    <option value="Ramos coreanos">Ramos coreanos</option>
+    <option value="Cajas">Cajas</option>
+    <option value="Cajas especiales">Cajas especiales</option>
+    <option value="Graduaciones">Graduaciones</option>
+    <option value="Globos burbuja">Globos burbuja</option>
+    <option value="Promos">Promos</option>
+    <option value="Desayunos">Desayunos</option>
   </select>
-</div>
 
-          
-          <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">Fecha de entrega deseada</label>
-            <input type="date" name="date" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all">
-          </div>
-          
-          <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">Dirección de entrega</label>
-            <textarea name="address" rows="2" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all resize-none" placeholder="Calle, número, colonia, ciudad"></textarea>
-          </div>
-          
-          <div>
-            <label class="block text-[#2C2C2C] font-medium mb-2">Mensaje / Detalles del pedido</label>
-            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-[#F5E0E9] bg-white focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 outline-none transition-all resize-none" placeholder="Cuéntanos más sobre lo que buscas: colores, tipo de flores, presupuesto, etc."></textarea>
-          </div>
-          
+  <!-- OPCIONES -->
+  <label class="block font-semibold mb-1">Tipo / Variante</label>
+  <select name="opciones" id="opciones" class="w-full p-3 border rounded-lg mb-4">
+    <option>Selecciona un producto primero</option>
+  </select>
+
+  <!-- EXTRAS -->
+  <label class="block font-semibold mb-2">Extras</label>
+  <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+    <label><input type="checkbox" value="Corona grande $380"> Corona grande $380</label>
+    <label><input type="checkbox" value="Mariposa $30"> Mariposa $30</label>
+    <label><input type="checkbox" value="Listón $100"> Listón $100</label>
+    <label><input type="checkbox" value="Moño $50"> Moño $50</label>
+    <label><input type="checkbox" value="Malla $100"> Malla $100</label>
+    <label><input type="checkbox" value="24 Ferreros $450"> 24 Ferreros $450</label>
+    <label><input type="checkbox" value="16 Ferreros $350"> 16 Ferreros $350</label>
+    <label><input type="checkbox" value="Inicial nubecita $150"> Inicial nubecita $150</label>
+    <label><input type="checkbox" value="Inicial espejo $80"> Inicial espejo $80</label>
+  </div>
+
+  <!-- FECHA -->
+  <label class="block font-semibold mb-1">Fecha de entrega deseada</label>
+  <input type="date" name="date"
+    class="w-full p-3 border rounded-lg mb-4">
+
+  <!-- DIRECCIÓN -->
+  <label class="block font-semibold mb-1">Dirección de entrega</label>
+  <input type="text" name="address"
+    placeholder="Ej: Calle, colonia, referencias..."
+    class="w-full p-3 border rounded-lg mb-4">
+
+  <!-- MENSAJE -->
+  <label class="block font-semibold mb-1">Detalles</label>
+  <textarea name="message"
+    placeholder="Color, dedicatoria, instrucciones..."
+    class="w-full p-3 border rounded-lg mb-4"></textarea>
+
           <button type="submit" class="w-full bg-[#A8D5BA] text-[#2C2C2C] py-4 rounded-full font-bold text-lg hover:bg-[#95C9A8] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
             <i class="fab fa-whatsapp text-2xl"></i>
             Enviar Solicitud
@@ -334,6 +341,10 @@
     </div>
   </div>
 </section>
+
+</form>
+
+</div>
 
 <section id="contact-location" class="code-section bg-[#FEF7FA] py-16 lg:py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -595,6 +606,85 @@ document.querySelector('[data-landingsite-contact-form]').addEventListener('subm
   window.open(url, "_blank");
 
 });
+</script>
+
+
+<script>
+
+// OPCIONES DINÁMICAS
+const opcionesProductos = {
+"Ramos de rosas": ["24 Rosas","48 Rosas","72 Rosas","100 Rosas"],
+"Tulipanes": ["Rosa","Fucsia","Rojo","Blanco"],
+"Ramos de girasoles": ["Con dollar","Con clavelinas","Con 24 rosas"],
+"Maxi ramos": ["200 rosas","300 rosas"],
+"Maxi Enamorados": ["Corazón 100 rosas","Maxi corazón 200 rosas"],
+"Jarrones": ["Lechero","Mix","Cumpleañero","Delirio"],
+"Ramos de lilis": ["Lilis + follaje","Lilis + 24 rosas","Lilis + gerberas"],
+"Gerberas": ["20 ramo","40 ramo","20 jarrón"],
+"Ramos coreanos": ["Chico","Grande"],
+"Cajas": ["Espiral","Esfera","Suspiro"],
+"Cajas especiales": ["Corazón","Mitad y mitad","Lily"],
+"Graduaciones": ["Caja con globo","Caja graduación"],
+"Globos burbuja": ["Látex","Metálico","Orbz","Personalizado"],
+"Promos": ["Jarrón 48 rosas","Globo + 48 rosas","48 rosas ramo"],
+"Desayunos": ["Sencillo","Premium"]
+};
+
+document.getElementById("producto").addEventListener("change", function() {
+  const opciones = document.getElementById("opciones");
+  opciones.innerHTML = "";
+
+  const lista = opcionesProductos[this.value];
+
+  if (lista) {
+    lista.forEach(op => {
+      let option = document.createElement("option");
+      option.textContent = op;
+      opciones.appendChild(option);
+    });
+  }
+});
+
+// ENVÍO WHATSAPP
+document.querySelector('[data-landingsite-contact-form]').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const nombre = form.name.value;
+  const telefono = form.phone.value;
+  const email = form.email.value;
+  const producto = form.producto.value;
+  const tipo = form.opciones.value;
+  const fecha = form.date.value;
+  const direccion = form.address.value;
+  const mensajeExtra = form.message.value;
+
+  let extras = [];
+  document.querySelectorAll('input[type=checkbox]:checked').forEach(e => {
+    extras.push(e.value);
+  });
+
+  const numero = "528120005880";
+
+  const mensaje = `🌸 Pedido 🌸
+
+👤 ${nombre}
+📱 ${telefono}
+📧 ${email || 'No proporcionado'}
+
+🛍️ ${producto}
+🎨 ${tipo}
+✨ Extras: ${extras.length ? extras.join(", ") : "Ninguno"}
+
+📅 ${fecha || 'Sin fecha'}
+📍 ${direccion || 'Sin dirección'}
+
+💬 ${mensajeExtra || 'Sin detalles'}`;
+
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, "_blank");
+});
+
 </script>
 
 
