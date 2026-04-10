@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Florería Lilians</title>
@@ -342,8 +342,6 @@
   </div>
 </section>
 
-</form>
-
 </div>
 
 <section id="contact-location" class="code-section bg-[#FEF7FA] py-16 lg:py-24">
@@ -577,85 +575,101 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
 
-// OPCIONES DINÁMICAS
-const opcionesProductos = {
-"Ramos de rosas": ["24 Rosas","48 Rosas","72 Rosas","100 Rosas"],
-"Tulipanes": ["Rosa","Fucsia","Rojo","Blanco"],
-"Ramos de girasoles": ["Con dollar","Con clavelinas","Con 24 rosas"],
-"Maxi ramos": ["200 rosas","300 rosas"],
-"Maxi Enamorados": ["Corazón 100 rosas","Maxi corazón 200 rosas"],
-"Jarrones": ["Lechero","Mix","Cumpleañero","Delirio"],
-"Ramos de lilis": ["Lilis + follaje","Lilis + 24 rosas","Lilis + gerberas"],
-"Gerberas": ["20 ramo","40 ramo","20 jarrón"],
-"Ramos coreanos": ["Chico","Grande"],
-"Cajas": ["Espiral","Esfera","Suspiro"],
-"Cajas especiales": ["Corazón","Mitad y mitad","Lily"],
-"Graduaciones": ["Caja con globo","Caja graduación"],
-"Globos burbuja": ["Látex","Metálico","Orbz","Personalizado"],
-"Promos": ["Jarrón 48 rosas","Globo + 48 rosas","48 rosas ramo"],
-"Desayunos": ["Sencillo","Premium"]
-};
+  // OPCIONES DINÁMICAS
+  const opcionesProductos = {
+    "Ramos de rosas": ["24 Rosas","48 Rosas","72 Rosas","100 Rosas"],
+    "Tulipanes": ["Rosa","Fucsia","Rojo","Blanco"],
+    "Ramos de girasoles": ["Con dollar","Con clavelinas","Con 24 rosas"],
+    "Maxi ramos": ["200 rosas","300 rosas"],
+    "Maxi Enamorados": ["Corazón 100 rosas","Maxi corazón 200 rosas"],
+    "Jarrones": ["Lechero","Mix","Cumpleañero","Delirio"],
+    "Ramos de lilis": ["Lilis + follaje","Lilis + 24 rosas","Lilis + gerberas"],
+    "Gerberas": ["20 ramo","40 ramo","20 jarrón"],
+    "Ramos coreanos": ["Chico","Grande"],
+    "Cajas": ["Espiral","Esfera","Suspiro"],
+    "Cajas especiales": ["Corazón","Mitad y mitad","Lily"],
+    "Graduaciones": ["Caja con globo","Caja graduación"],
+    "Globos burbuja": ["Látex","Metálico","Orbz","Personalizado"],
+    "Promos": ["Jarrón 48 rosas","Globo + 48 rosas","48 rosas ramo"],
+    "Desayunos": ["Sencillo","Premium"]
+  };
 
-// CAMBIO DE OPCIONES
-document.getElementById("producto").addEventListener("change", function() {
-  const opciones = document.getElementById("opciones");
-  opciones.innerHTML = "<option value=''>Selecciona</option>";
+  const productoSelect = document.getElementById("producto");
+  const opcionesSelect = document.getElementById("opciones");
 
-  const lista = opcionesProductos[this.value];
-
-  if (lista) {
-    lista.forEach(op => {
-      let option = document.createElement("option");
-      option.value = op;
-      option.textContent = op;
-      opciones.appendChild(option);
-    });
+  // VALIDACIÓN (MUY IMPORTANTE)
+  if (!productoSelect || !opcionesSelect) {
+    console.error("No existen #producto o #opciones en el HTML");
+    return;
   }
-});
 
-// ENVÍO WHATSAPP
-document.querySelector('[data-landingsite-contact-form]').addEventListener('submit', function(e) {
-  e.preventDefault();
+  // CAMBIO DE OPCIONES
+  productoSelect.addEventListener("change", function() {
+    opcionesSelect.innerHTML = "<option value=''>Selecciona</option>";
 
-  const form = e.target;
+    const lista = opcionesProductos[this.value];
 
-  const nombre = form.name.value;
-  const telefono = form.phone.value;
-  const email = form.email.value;
-  const producto = form.producto.value;
-  const tipo = form.opciones.value;
-  const fecha = form.date.value;
-  const direccion = form.address.value;
-  const mensajeExtra = form.message.value;
-
-  let extras = [];
-  document.querySelectorAll('input[type=checkbox]:checked').forEach(el => {
-    extras.push(el.value);
+    if (lista) {
+      lista.forEach(op => {
+        const option = document.createElement("option");
+        option.value = op;
+        option.textContent = op;
+        opcionesSelect.appendChild(option);
+      });
+    }
   });
 
-  const numero = "528120005880";
+  // FORM
+  const form = document.querySelector('[data-landingsite-contact-form]');
+  
+  if (!form) {
+    console.error("No se encontró el formulario");
+    return;
+  }
 
-  const mensaje = `🌸 Pedido 🌸
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-👤 Nombre: ${nombre}
-📱 Teléfono: ${telefono}
-📧 Email: ${email || 'No proporcionado'}
+    const nombre = form.querySelector('[name="name"]')?.value || '';
+    const telefono = form.querySelector('[name="phone"]')?.value || '';
+    const email = form.querySelector('[name="email"]')?.value || '';
+    const producto = form.querySelector('[name="producto"]')?.value || '';
+    const tipo = form.querySelector('[name="opciones"]')?.value || '';
+    const fecha = form.querySelector('[name="date"]')?.value || '';
+    const direccion = form.querySelector('[name="address"]')?.value || '';
+    const mensajeExtra = form.querySelector('[name="message"]')?.value || '';
 
-🛍️ Producto: ${producto || 'No especificado'}
-🎨 Tipo: ${tipo || 'No especificado'}
-✨ Extras: ${extras.length ? extras.join(", ") : "Ninguno"}
+    let extras = [];
+    form.querySelectorAll('input[type=checkbox]:checked').forEach(el => {
+      extras.push(el.value);
+    });
 
-📅 Fecha: ${fecha || 'Sin fecha'}
-📍 Dirección: ${direccion || 'Sin dirección'}
+    const numero = "528120005880";
 
-💬 Detalles: ${mensajeExtra || 'Sin detalles'}`;
+    const mensaje = ` Hola, Quiero hacer un pedido 
 
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+ Nombre: ${nombre}
+ Teléfono: ${telefono}
+ Email: ${email || 'No proporcionado'}
+
+ Producto: ${producto || 'No especificado'}
+ Tipo: ${tipo || 'No especificado'}
+ Extras: ${extras.length ? extras.join(", ") : "Ninguno"}
+
+ Fecha: ${fecha || 'Sin fecha'}
+ Dirección: ${direccion || 'Sin dirección'}
+
+ Detalles: ${mensajeExtra || 'Sin detalles'}`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+  });
+
 });
-
 </script>
+
 
 
 
