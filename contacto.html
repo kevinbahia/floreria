@@ -577,39 +577,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-document.querySelector('[data-landingsite-contact-form]').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-
-  const nombre = form.name.value;
-  const telefono = form.phone.value;
-  const email = form.email.value;
-  const producto = form.producto.value; // 🔥 cambiado
-  const fecha = form.date.value;
-  const direccion = form.address.value;
-  const mensajeExtra = form.message.value;
-
-  const numero = "528120005880"; // CAMBIA POR EL TUYO
-
-  const mensaje = `🌸 Nueva solicitud de pedido 🌸
-
-👤 Nombre: ${nombre}
-📱 Teléfono: ${telefono}
-📧 Email: ${email || 'No proporcionado'}
-🛍️ Producto: ${producto || 'No especificado'}
-📅 Fecha: ${fecha || 'No especificada'}
-📍 Dirección: ${direccion || 'No proporcionada'}
-💬 Detalles: ${mensajeExtra || 'Sin detalles'}`;
-
-  const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
-
-});
-</script>
-
-
-<script>
 
 // OPCIONES DINÁMICAS
 const opcionesProductos = {
@@ -630,15 +597,17 @@ const opcionesProductos = {
 "Desayunos": ["Sencillo","Premium"]
 };
 
+// CAMBIO DE OPCIONES
 document.getElementById("producto").addEventListener("change", function() {
   const opciones = document.getElementById("opciones");
-  opciones.innerHTML = "";
+  opciones.innerHTML = "<option value=''>Selecciona</option>";
 
   const lista = opcionesProductos[this.value];
 
   if (lista) {
     lista.forEach(op => {
       let option = document.createElement("option");
+      option.value = op;
       option.textContent = op;
       opciones.appendChild(option);
     });
@@ -661,28 +630,29 @@ document.querySelector('[data-landingsite-contact-form]').addEventListener('subm
   const mensajeExtra = form.message.value;
 
   let extras = [];
-  document.querySelectorAll('input[type=checkbox]:checked').forEach(e => {
-    extras.push(e.value);
+  document.querySelectorAll('input[type=checkbox]:checked').forEach(el => {
+    extras.push(el.value);
   });
 
   const numero = "528120005880";
 
   const mensaje = `🌸 Pedido 🌸
 
-👤 ${nombre}
-📱 ${telefono}
-📧 ${email || 'No proporcionado'}
+👤 Nombre: ${nombre}
+📱 Teléfono: ${telefono}
+📧 Email: ${email || 'No proporcionado'}
 
-🛍️ ${producto}
-🎨 ${tipo}
+🛍️ Producto: ${producto || 'No especificado'}
+🎨 Tipo: ${tipo || 'No especificado'}
 ✨ Extras: ${extras.length ? extras.join(", ") : "Ninguno"}
 
-📅 ${fecha || 'Sin fecha'}
-📍 ${direccion || 'Sin dirección'}
+📅 Fecha: ${fecha || 'Sin fecha'}
+📍 Dirección: ${direccion || 'Sin dirección'}
 
-💬 ${mensajeExtra || 'Sin detalles'}`;
+💬 Detalles: ${mensajeExtra || 'Sin detalles'}`;
 
-  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, "_blank");
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, "_blank");
 });
 
 </script>
