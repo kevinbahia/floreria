@@ -1,23 +1,46 @@
-// Countdown timer
 function updateCountdown() {
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');
   const secondsEl = document.getElementById('seconds');
+  const deliveryText = document.getElementById('delivery-text');
+  const cutoffText = document.getElementById('cutoff-text');
 
   if (!hoursEl || !minutesEl || !secondsEl) return;
 
   const now = new Date();
-  const cutoff = new Date();
 
-  // Hora límite 2:00 PM
-  cutoff.setHours(14, 0, 0, 0);
+  const cutoffToday = new Date();
+  cutoffToday.setHours(14, 0, 0, 0);
 
-  // Si ya pasó, siguiente día
-  if (now > cutoff) {
-    cutoff.setDate(cutoff.getDate() + 1);
+  let target;
+  let isToday = now < cutoffToday;
+
+  if (isToday) {
+    target = cutoffToday;
+
+    if (deliveryText) {
+      deliveryText.innerHTML = "Entrega estimada: HOY antes de las 6:00 PM";
+    }
+
+    if (cutoffText) {
+      cutoffText.innerHTML = "Corte para entrega hoy";
+    }
+
+  } else {
+    target = new Date();
+    target.setDate(target.getDate() + 1);
+    target.setHours(14, 0, 0, 0);
+
+    if (deliveryText) {
+      deliveryText.innerHTML = "Entrega estimada: MAÑANA antes de las 6:00 PM";
+    }
+
+    if (cutoffText) {
+      cutoffText.innerHTML = "Pedidos para hoy cerrados";
+    }
   }
 
-  const diff = cutoff - now;
+  const diff = target - now;
 
   const hours = Math.floor(diff / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -27,13 +50,18 @@ function updateCountdown() {
   minutesEl.textContent = String(minutes).padStart(2, '0');
   secondsEl.textContent = String(seconds).padStart(2, '0');
 
-  // 🔥 ALERTA PRO cuando queda poco tiempo
-  if (hours <= 1) {
+  // 🔥 alerta cuando queda poco tiempo
+  if (isToday && hours <= 1) {
     hoursEl.classList.add("text-red-500");
     minutesEl.classList.add("text-red-500");
     secondsEl.classList.add("text-red-500");
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});
 
 // MENU MOBILE (tu código)
 function toggleMobileMenu() {

@@ -478,32 +478,82 @@
 <section id="urgency-section" class="code-section relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-r from-[#2C2C2C] via-[#3D3D3D] to-[#2C2C2C]"></div>
   <div class="absolute inset-0 opacity-20" style="background-image: url('https://assets.ls-assets.com/provider/istock/2247357789.jpg?w=1920'); background-size: cover; background-position: center;"></div>
+
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- TEXTO -->
       <div>
-        <div class="inline-flex items-center gap-2 bg-[#A8D5BA] text-[#2C2C2C] px-4 py-2 rounded-full text-sm font-bold mb-6"><i class="fas fa-bolt"></i><span>Entrega Express</span></div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">¡Pide Hoy,<br><span class="text-[#F8C8DC]">Recibe Hoy!</span></h2>
-        <p class="text-gray-300 text-lg mb-8">Hacemos tu pedido realidad en horas. Si tu pedido llega antes de las <strong class="text-[#D4AF37]">2:00 PM</strong>, entregamos el mismo día.</p>
-        <a href="contacto.html" class="inline-flex items-center gap-3 bg-[#A8D5BA] text-[#2C2C2C] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#95C9A8] hover:text-[#1A1A1A] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"><i class="fab fa-whatsapp text-2xl"></i>¡Haz Tu Pedido Ya!</a>
+        <div class="inline-flex items-center gap-2 bg-[#A8D5BA] text-[#2C2C2C] px-4 py-2 rounded-full text-sm font-bold mb-6">
+          <i class="fas fa-bolt"></i><span>Entrega Express</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+          ¡Pide Hoy,<br><span class="text-[#F8C8DC]">Recibe Hoy!</span>
+        </h2>
+
+        <p class="text-gray-300 text-lg mb-8">
+          Hacemos tu pedido realidad en horas. Si tu pedido llega antes de las 
+          <strong class="text-[#D4AF37]">2:00 PM</strong>, entregamos el mismo día.
+        </p>
+
+        <a href="contacto.html" class="inline-flex items-center gap-3 bg-[#A8D5BA] text-[#2C2C2C] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#95C9A8] hover:text-[#1A1A1A] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+          <i class="fab fa-whatsapp text-2xl"></i>¡Haz Tu Pedido Ya!
+        </a>
       </div>
+
+      <!-- CONTADOR -->
       <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/20">
         <div class="text-center">
-          <p class="text-[#F8C8DC] font-semibold text-lg mb-4">Corte para entrega hoy</p>
+
+          <!-- 🔥 TEXTO DINÁMICO -->
+          <p id="cutoff-text" class="text-[#F8C8DC] font-semibold text-lg mb-4">
+            Corte para entrega hoy
+          </p>
+
+          <!-- CONTADOR -->
           <div class="flex justify-center gap-4 mb-6">
-            <div class="bg-[#2C2C2C] rounded-2xl p-4 min-w-[80px]"><div id="hours" class="text-4xl lg:text-5xl font-bold text-[#D4AF37]">02</div><div class="text-gray-400 text-sm mt-1">Horas</div></div>
+            <div class="bg-[#2C2C2C] rounded-2xl p-4 min-w-[80px]">
+              <div id="hours" class="text-4xl lg:text-5xl font-bold text-[#D4AF37]">00</div>
+              <div class="text-gray-400 text-sm mt-1">Horas</div>
+            </div>
+
             <div class="flex items-center text-[#D4AF37] text-3xl font-bold pt-4">:</div>
-            <div class="bg-[#2C2C2C] rounded-2xl p-4 min-w-[80px]"><div id="minutes" class="text-4xl lg:text-5xl font-bold text-[#D4AF37]">00</div><div class="text-gray-400 text-sm mt-1">Min</div></div>
+
+            <div class="bg-[#2C2C2C] rounded-2xl p-4 min-w-[80px]">
+              <div id="minutes" class="text-4xl lg:text-5xl font-bold text-[#D4AF37]">00</div>
+              <div class="text-gray-400 text-sm mt-1">Min</div>
+            </div>
+
             <div class="flex items-center text-[#D4AF37] text-3xl font-bold pt-4">:</div>
-            <div class="bg-[#2C2C2C] rounded-2xl p-4 min-w-[80px]"><div id="seconds" class="text-4xl lg:text-5xl font-bold text-[#D4AF37]">00</div><div class="text-gray-400 text-sm mt-1">Seg</div></div>
+
+            <div class="bg-[#2C2C2C] rounded-2xl p-4 min-w-[80px]">
+              <div id="seconds" class="text-4xl lg:text-5xl font-bold text-[#D4AF37]">00</div>
+              <div class="text-gray-400 text-sm mt-1">Seg</div>
+            </div>
           </div>
-          <p class="text-gray-300 text-sm"><i class="fas fa-truck text-[#A8D5BA] mr-2"></i>Entrega estimada: HOY antes de las 6:00 PM</p>
+
+          <!-- 🔥 TEXTO DINÁMICO -->
+          <p id="delivery-text" class="text-gray-300 text-sm">
+            <i class="fas fa-truck text-[#A8D5BA] mr-2"></i>
+            Entrega estimada: HOY antes de las 6:00 PM
+          </p>
+
           <div class="flex flex-wrap justify-center gap-4 mt-8 pt-6 border-t border-white/10">
-            <div class="flex items-center gap-2 text-white text-sm"><i class="fas fa-check-circle text-[#A8D5BA]"></i><span>Flores Frescas</span></div>
-            <div class="flex items-center gap-2 text-white text-sm"><i class="fas fa-check-circle text-[#A8D5BA]"></i><span>Envío Discreto</span></div>
-            <div class="flex items-center gap-2 text-white text-sm"><i class="fas fa-check-circle text-[#A8D5BA]"></i><span>Garantía de Calidad</span></div>
+            <div class="flex items-center gap-2 text-white text-sm">
+              <i class="fas fa-check-circle text-[#A8D5BA]"></i><span>Flores Frescas</span>
+            </div>
+            <div class="flex items-center gap-2 text-white text-sm">
+              <i class="fas fa-check-circle text-[#A8D5BA]"></i><span>Envío Discreto</span>
+            </div>
+            <div class="flex items-center gap-2 text-white text-sm">
+              <i class="fas fa-check-circle text-[#A8D5BA]"></i><span>Garantía de Calidad</span>
+            </div>
           </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -629,39 +679,5 @@
   <a href="contacto.html" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 hover:bg-[#20BD5A]" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp text-3xl"></i></a>
 </footer>
 
-
-<script>
-function actualizarContador() {
-  const ahora = new Date();
-
-  // Hora límite (2:00 PM)
-  const limite = new Date();
-  limite.setHours(14, 0, 0, 0);
-
-  // Si ya pasó la hora, pasar al siguiente día
-  if (ahora > limite) {
-    limite.setDate(limite.getDate() + 1);
-  }
-
-  const diferencia = limite - ahora;
-
-  const horas = Math.floor(diferencia / (1000 * 60 * 60));
-  const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-  const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-  document.getElementById("hours").textContent = String(horas).padStart(2, '0');
-  document.getElementById("minutes").textContent = String(minutos).padStart(2, '0');
-  document.getElementById("seconds").textContent = String(segundos).padStart(2, '0');
-}
-
-// Ejecutar cada segundo
-setInterval(actualizarContador, 1000);
-
-// Ejecutar inmediatamente
-actualizarContador();
-</script>
-
 <script src="script.js" defer></script>
-
-
 </body>

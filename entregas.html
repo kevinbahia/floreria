@@ -312,12 +312,15 @@
   
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- TEXTO -->
       <div class="text-center lg:text-left">
         <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
           ¡Pide Hoy, Recibe Hoy!
         </h2>
+
         <p class="text-white/90 text-lg mb-6">
-            Los pedidos realizados antes de las <strong>2:00 PM</strong> se entregan el mismo día.
+          Los pedidos realizados antes de las <strong>2:00 PM</strong> se entregan el mismo día.
         </p>
 
         <a href="contacto.html" class="inline-flex items-center gap-3 bg-white text-[#D4AF37] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#2C2C2C] hover:text-white transition-all duration-300 shadow-xl">
@@ -326,48 +329,75 @@
         </a>
       </div>
       
+      <!-- CONTADOR -->
       <div class="bg-white/20 backdrop-blur-md rounded-3xl p-8 text-center">
-        <p class="text-white font-semibold mb-4">Tiempo restante para entrega hoy:</p>
+
+        <!-- 🔥 TEXTO DINÁMICO -->
+        <p id="cutoff-text-2" class="text-white font-semibold mb-4">
+          Tiempo restante para entrega hoy:
+        </p>
+
         <div class="flex justify-center gap-4">
           <div class="bg-white rounded-2xl p-4 min-w-[70px]">
-            <div id="hours" class="text-4xl font-bold text-[#D4AF37]">02</div>
+            <div id="hours2" class="text-4xl font-bold text-[#D4AF37]">00</div>
             <div class="text-white/70 text-sm">Horas</div>
           </div>
+
           <div class="text-white text-3xl font-bold pt-4">:</div>
+
           <div class="bg-white rounded-2xl p-4 min-w-[70px]">
-            <div id="minutes" class="text-4xl font-bold text-[#D4AF37]">00</div>
+            <div id="minutes2" class="text-4xl font-bold text-[#D4AF37]">00</div>
             <div class="text-white/70 text-sm">Min</div>
           </div>
+
           <div class="text-white text-3xl font-bold pt-4">:</div>
+
           <div class="bg-white rounded-2xl p-4 min-w-[70px]">
-            <div id="seconds" class="text-4xl font-bold text-[#D4AF37]">00</div>
+            <div id="seconds2" class="text-4xl font-bold text-[#D4AF37]">00</div>
             <div class="text-white/70 text-sm">Seg</div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </section>
 
 <script>
-// ===== COUNTDOWN =====
-function updateCountdown() {
-  const hoursEl = document.getElementById('hours');
-  const minutesEl = document.getElementById('minutes');
-  const secondsEl = document.getElementById('seconds');
+function updateCountdown2() {
+  const hoursEl = document.getElementById('hours2');
+  const minutesEl = document.getElementById('minutes2');
+  const secondsEl = document.getElementById('seconds2');
+  const cutoffText = document.getElementById('cutoff-text-2');
 
   if (!hoursEl || !minutesEl || !secondsEl) return;
 
   const now = new Date();
-  const cutoff = new Date();
-  cutoff.setHours(14, 0, 0, 0); // 2:00 PM
 
-  // si ya pasó la hora, se mueve al día siguiente
-  if (now > cutoff) {
-    cutoff.setDate(cutoff.getDate() + 1);
+  const cutoffToday = new Date();
+  cutoffToday.setHours(14, 0, 0, 0);
+
+  let target;
+  let isToday = now < cutoffToday;
+
+  if (isToday) {
+    target = cutoffToday;
+
+    if (cutoffText) {
+      cutoffText.innerHTML = "Tiempo restante para entrega hoy:";
+    }
+
+  } else {
+    target = new Date();
+    target.setDate(target.getDate() + 1);
+    target.setHours(14, 0, 0, 0);
+
+    if (cutoffText) {
+      cutoffText.innerHTML = "Pedidos para hoy cerrados";
+    }
   }
 
-  const diff = cutoff - now;
+  const diff = target - now;
 
   const hours = Math.floor(diff / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -376,25 +406,20 @@ function updateCountdown() {
   hoursEl.textContent = String(hours).padStart(2, '0');
   minutesEl.textContent = String(minutes).padStart(2, '0');
   secondsEl.textContent = String(seconds).padStart(2, '0');
-}
 
-// ===== MOBILE MENU =====
-function toggleMobileMenu() {
-  const menu = document.querySelector('[data-landingsite-mobile-menu]');
-  if (menu) menu.classList.toggle('hidden');
-}
-
-function setupMobileMenu() {
-  const btn = document.querySelector('[data-landingsite-mobile-menu-toggle]');
-  if (btn) {
-    btn.addEventListener('click', toggleMobileMenu);
+  // 🔥 alerta cuando queda poco tiempo
+  if (isToday && hours <= 1) {
+    hoursEl.classList.add("text-red-500");
+    minutesEl.classList.add("text-red-500");
+    secondsEl.classList.add("text-red-500");
   }
 }
 
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-  setupMobileMenu();
+document.addEventListener("DOMContentLoaded", () => {
+  updateCountdown2();
+  setInterval(updateCountdown2, 1000);
 });
 </script>
+
+
+<script src="script.js" defer></script>
